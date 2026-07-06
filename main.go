@@ -4,17 +4,18 @@ import (
 	"log"
 	"time"
 
-	"github.com/marunyann416/gojiho/audio"
+	//"github.com/marunyann416/gojiho/audio"
+	"github.com/marunyann416/gojiho/audio2"
 )
 
 func main() {
-	err := audio.Init()
+	err := audio2.Init()
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for {
-		audio.CheckAndPlay()
+		audio2.CheckAndPlay()
 
 		// 次の分まで待つ
 		now := time.Now()

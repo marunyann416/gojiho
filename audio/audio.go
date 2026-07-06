@@ -13,7 +13,7 @@ var audioDevice string
 var schedule map[string]string
 
 func Init() error {
-	err := godotenv.Load()
+	err := godotenv.Load("audio/.env")
 	if err != nil {
 		return err
 	}
@@ -66,7 +66,7 @@ func CheckAndPlay() {
 	cmd := exec.Command(
 		"mpg123",
 		"-q",
-//		"-a", audioDevice,
+		//		"-a", audioDevice,
 		"sounds/"+file,
 	)
 
